@@ -12,13 +12,14 @@ var rate = document.getElementById("rate");
 var years = document.getElementById("years");
 var rateval = document.getElementById("rate_val");
 
-// init form values rate field
-rate.setAttribute("max", MAXVAL);
-rate.setAttribute("min", MINVAL);
-rate.setAttribute("value", DEFAULT_VAL);
-rate.setAttribute("step", STEP);
-rateval.value = DEFAULT_VAL + '%';
-
+setTimeout(function(){
+  // init form values rate field
+  rate.setAttribute("max", MAXVAL);
+  rate.setAttribute("min", MINVAL);
+  rate.setAttribute("value", DEFAULT_VAL);
+  rate.setAttribute("step", STEP);
+  rateval.value = DEFAULT_VAL + '%';
+},500);
 
 function compute()
 {
