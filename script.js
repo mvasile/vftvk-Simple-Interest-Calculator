@@ -39,9 +39,9 @@ function compute()
     }
     // set value
 	var principalVal = amount.value;
-  var rateVal = rate.value;
-  var yearsVal = years.value;
-  var year = new Date().getFullYear() + parseInt(years.value);
+    var rateVal = rate.value;
+    var yearsVal = years.value;
+    var year = new Date().getFullYear() + parseInt(years.value);
 	var interest = principalVal * yearsVal * rateVal /100 ;
     // inner in element html response function
 	document.getElementById("result").innerHTML="If you deposit <mark>"+principalVal+",\</mark><br\>at an interest rate of <mark>"+rateVal+"%\</mark><br\>You will receive an amount of <mark>"+interest+",\</mark><br\>in the year <mark>"+year+"\</mark><br\>"
