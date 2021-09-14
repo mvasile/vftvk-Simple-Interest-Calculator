@@ -1,16 +1,60 @@
+<!DOCTYPE html>
 <html>
     <head>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <title>Simple Interest Calculator</title>
     </head>
     <body>
-        <h1>Simple Interest Calculator</h1>
+        <div class="maindiv">
+            <h1>Simple Interest Calculator</h1>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
 
-        <button onclick="compute()">Compute</button>
+            <div class="block">
+              <label for="amount"><strong>Amount</strong></label>
+              <input type="number"  id="principal">
+            </div>
+            
+            <div class="block">
+              <label for="rate"><strong>Rate</strong></label>
+              
+              <output name="rate_val" id="rate_val"></output>
+              <input min="minval" max="maxval" value="default_val" type="range" id="rate" step="" oninput="updateRate()"> 
+            </div>
+            
+            <div class="block">
+              <label for="years"><strong>No. of Years</strong></label>  
+              <select name="years" id="years">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+              </select>
+            </div>
+            <div class="block"></div>
+           <button onclick="compute()">Compute</button>
+           <button onclick="reset()">Reset</button>
+           <br><br>
+           <span id="result"></span><br>
+           <footer>
+              &#169; This Calculator belongs to Max
+           </footer>
+        </div>
     </body>
 </html>
